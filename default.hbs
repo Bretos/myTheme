@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="to be filled">
+    <meta name="author" content="Bretos">
+    <title>{{meta_title}}</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400' type='text/css'>
+    <link rel='stylesheet' href='{{asset "css/bootstrap.min.css"}}' type='text/css'>
+    <link rel='stylesheet' href='{{asset "css/theme.css"}}' type='text/css'>
+
+</head>
+    {{ghost_head}}
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">myTheme</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>        
+	
+	<div class="container">
+            <div class="box">
+    		{{{body}}}
+            </div>
+        </div>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="{{asset "js/trianglify.js"}}"></script>
+        <script>
+        var t = new Trianglify({noiseIntensity: 0});
+	    var pattern = t.generate(document.body.clientWidth, height());
+	 document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+	pattern.svg         // SVG DOM Node object
+	pattern.svgString   // String representation of the svg element
+	pattern.base64      // Base64 representation of the svg element
+	pattern.dataUri     // data-uri string
+	pattern.dataUrl     // data-uri string wrapped in url() for use in css
+	function height() {
+		return Math.max(
+			document.body.scrollHeight, document.documentElement.scrollHeight,
+			document.body.offsetHeight, document.documentElement.offsetHeight,
+			document.body.clientHeight, document.documentElement.clientHeight
+				);
+			}
+	</script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+   </body>
+</html>
