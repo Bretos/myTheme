@@ -12,7 +12,7 @@ Generates beatufil background
 
 Here is an example of how myTheme looks:
 
-http://i.imgur.com/dmjzql3.png
+![screenshot](http://i.imgur.com/dmjzql3.png)
 
 Hope you like it!
 
