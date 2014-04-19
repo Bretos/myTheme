@@ -51,3 +51,7 @@
 	.box {
 	    	margin: 0px -100px;
 		}
+	}
+	::-webkit-scrollbar {
+	         display: none;
+		          }
