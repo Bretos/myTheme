@@ -19,6 +19,11 @@ http://vps.tyborek.pl
 
 Hope you like it!
 
-If such case you would like to make a donation, my pay-pal mail is:
+If you would like to make a donation, this is my paypal address:
 
 bretos4all@gmail.com
+
+Even the smallest donation would greatly help me improve my work!
+
+Thanks,
+Bretos.
