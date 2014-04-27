@@ -44,6 +44,20 @@
         p {
             margin-bottom: 10px;
         }
+	.post-meta {
+	font-size:14px;
+	text-align:left;
+	}
+	.post-content {
+	text-align:left;
+	}
+	.blog-title {
+	float:left;
+	}
+	.tags {
+	text-align:right;
+	font-size:12px;
+	}
 	@media screen and (max-width: 600px) {
 	.container {
 		padding-top: 0px;

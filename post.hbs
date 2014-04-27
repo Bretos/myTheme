@@ -13,7 +13,7 @@
                 {{#if @blog.logo}}
                     <img src="{{@blog.logo}}" alt="Blog Logo" />
                 {{else}}
-                    <span class="blog-title" style="float:left;">{{@blog.title}}</span>
+                    <span class="blog-title">{{@blog.title}}</span>
                 {{/if}}
             </a>
         </header>
@@ -25,7 +25,7 @@
 
             <h1 class="post-title">{{{title}}}</h1>
 	    <hr>
-            <section class="post-content" style="text-align:left;">
+            <section class="post-content">
             {{content}}
 	    <hr>
 	    </section>
@@ -42,7 +42,7 @@
 
 
             </footer><!-- I could not decide on which side to put tags... -->
-	<p align="right" style="font-size:12px">{{tags prefix="Tags: " separator=" | "}} </p>
+	<p class="tags">{{tags prefix="Tags: " separator=" | "}} </p>
         {{/post}}
 
     </article>
