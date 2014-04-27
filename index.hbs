@@ -1,26 +1,26 @@
 {{!< default}}
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-
-    {{! Each post will be output using this markup }}
+  {{#if posts}}
+    {{!! Each post will be output using this markup }}
     {{#foreach posts}}
-
-    <article class="{{post_class}}">
+      <article class="{{post_class}}">
         <header class="post-header">
-<p align="left"><span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span></p>
           <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        </header><br />
+        </header>
         <section class="post-excerpt">
-            <p>{{excerpt}}&hellip; <a class="read-more" href="{{url}}">&raquo;</a></p> <!-- &hellip - change this little fucker if you don't want that three dots at the end
-	    of every post on main site. For now there is no way to change it using Ghost panel -->
-        <p style="font-size:12px">{{tags prefix="Tags: "}}<p>
-	<hr></section>
-    </article>
-
+          <p align="left">{{excerpt}}&hellip; <a class="read-more" href="{{url}}">&raquo;</a></p>
+          <span class="post-meta" style="font-size:14px; text-align:left;">
+            By {{#if author.website}}<a href="{{author.website}}">{{/if}}<i>{{author}}</i>{{#if author.website}}</a>{{/if}} on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>.
+          </span>
+	  <p style="font-size:12px">{{tags prefix="Tags: "}}<p>
+<hr>
+        </section>
+      </article>
     {{/foreach}}
-
-    {{!! After all the posts, we have the previous/next pagination links }}
+    {{!! After all the posts, we have the previous/next pagination links.}}
     {{pagination}}
+  {{else}}
+    No posts.
+  {{/if}}
 </main>
-
-
