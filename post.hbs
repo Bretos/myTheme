@@ -13,7 +13,7 @@
                 {{#if @blog.logo}}
                     <img src="{{@blog.logo}}" alt="Blog Logo" />
                 {{else}}
-                    <span class="blog-title">{{@blog.title}}</span>
+                    <span class="blog-title" style="float:left;">{{@blog.title}}</span>
                 {{/if}}
             </a>
         </header>
@@ -21,13 +21,14 @@
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
 
-           <p align="left"><br /><span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> </span></p>
+           <p align="right"><span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></span></p>
 
             <h1 class="post-title">{{{title}}}</h1>
+	    <hr>
             <section class="post-content">
-                {{content}}
-            </section>
-
+            {{content}}
+	    <hr>
+	    </section>
             <footer class="post-footer">
 
                 <section class="author">
